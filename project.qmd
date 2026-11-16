@@ -1,0 +1,152 @@
+---
+title: "Spotify Top 5 Analysis"
+format: html
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+library(tidyverse)
+
+# Create the dataset of Top 5 and comparison tracks
+songs_data <- tibble(
+  title = c(
+    "SQUEEZE", "Oh Yeah?", "WALLFLOWER", "Give You the World", "Evergreen (Stripped)",
+    "White Ferrari", "Japanese Denim", "Roommates", "Apocalypse",
+    "good 4 u", "Blinding Lights", "Closer", "After Party"
+  ),
+  artist = c(
+    "Dominic Fike", "Steve Lacy", "Dominic Fike", "Steve Lacy", "Omar Apollo",
+    "Frank Ocean", "Daniel Caesar", "Malcolm Todd", "Cigarettes After Sex",
+    "Olivia Rodrigo", "The Weeknd", "Ne-Yo", "Don Toliver"
+  ),
+  group = factor(
+    c(
+      rep("Top 5", 5),
+      rep("Similar (Soul / Bedroom Pop)", 4),
+      rep("Dissimilar (Uptempo / Dance / Trap)", 4)
+    ),
+    levels = c("Top 5", "Similar (Soul / Bedroom Pop)", "Dissimilar (Uptempo / Dance / Trap)")
+  ),
+  tempo = c(86, 92, 82, 78, 75, 60, 110, 88, 97, 167, 171, 126, 163),
+  energy = c(52, 48, 44, 45, 30, 18, 42, 50, 47, 66, 73, 77, 68),
+  valence = c(48, 65, 38, 42, 32, 22, 39, 58, 18, 69, 33, 73, 45),
+  popularity = c(72, 68, 65, 74, 76, 84, 81, 66, 88, 89, 93, 75, 80)
+)
+
+# Load 5,000 background tracks from Spotify catalog
+spotify_background <- read_csv("spotify_background.csv", show_col_types = FALSE)
+
+# Select a few recognizable reference tracks to label in the background
+sample_labels <- spotify_background |>
+  filter(title %in% c("Marvins Room", "Say So", "Hard Times", "Whole Lotta Love - 1990 Remaster", "One Less Lonely Girl")) |>
+  mutate(clean_title = case_when(
+    str_detect(title, "Whole Lotta Love") ~ "Whole Lotta Love (Led Zeppelin)",
+    title == "Marvins Room" ~ "Marvins Room (Drake)",
+    title == "Say So" ~ "Say So (Doja Cat)",
+    title == "Hard Times" ~ "Hard Times (Paramore)",
+    title == "One Less Lonely Girl" ~ "One Less Lonely Girl (Justin Bieber)",
+    TRUE ~ title
+  ))
+```
+
+## Sonic Profile Scatter Plot
+
+```{r}
+#| label: spotify-scatter
+#| fig-width: 9.5
+#| fig-height: 6
+
+ggplot() +
+  # 1. Background cloud of 5,000 general Spotify songs
+  geom_point(
+    data = spotify_background,
+    aes(x = tempo, y = energy),
+    color = "grey85",
+    alpha = 0.22,
+    size = 0.8
+  ) +
+  # Subtle labels for a few recognizable background songs
+  geom_text(
+    data = sample_labels,
+    aes(x = tempo, y = energy, label = clean_title),
+    color = "grey35",
+    size = 2.8,
+    vjust = 1.4,
+    check_overlap = TRUE
+  ) +
+  # 2. Foreground: Top 5 and comparison songs
+  geom_point(
+    data = songs_data,
+    aes(x = tempo, y = energy, color = group, size = popularity),
+    alpha = 0.9
+  ) +
+  geom_text(
+    data = songs_data,
+    aes(x = tempo, y = energy, label = title),
+    vjust = -1,
+    size = 3.2,
+    fontface = "bold",
+    check_overlap = TRUE
+  ) +
+  scale_size_continuous(range = c(3, 8), name = "Popularity") +
+  scale_color_manual(
+    values = c(
+      "Top 5" = "#1DB954",
+      "Similar (Soul / Bedroom Pop)" = "#2E86AB",
+      "Dissimilar (Uptempo / Dance / Trap)" = "#D64045"
+    ),
+    name = "Category"
+  ) +
+  scale_x_continuous(limits = c(45, 190), breaks = seq(60, 180, by = 20)) +
+  scale_y_continuous(limits = c(10, 95), breaks = seq(10, 90, by = 15)) +
+  labs(
+    title = "Why My Top 5 Songs Are My Top 5",
+    subtitle = "Positioned against 5,000 Spotify catalog tracks (gray cloud) with recognizable landmarks labeled",
+    x = "Tempo (Beats Per Minute)",
+    y = "Energy Level (0–100)",
+    caption = "Background: 5,000 tracks sampled from Spotify TidyTuesday catalog | Foreground: Personal profile"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(face = "bold", size = 15),
+    panel.grid.minor = element_blank()
+  )
+```
+
+## Research & Audio Analysis
+
+### 1. The Sweet Spot: Why These Top 5 Dominate
+Looking at the scatter plot, the Top 5 tracks (*SQUEEZE*, *Oh Yeah?*, *WALLFLOWER*, *Give You the World*, and *Evergreen*) cluster closely together in a distinct "pocket":
+- **Tempo:** A relaxed, head-nodding tempo between **75 and 92 BPM**.
+- **Energy:** Moderate to low energy levels between **30 and 52**, avoiding overwhelming loudness.
+- **Atmosphere:** Warm, guitar-driven indie R&B and bedroom pop where vocal tone and emotional intimacy are foregrounded.
+
+### 2. Comparisons to Similar Songs
+Tracks like Frank Ocean's *White Ferrari*, Daniel Caesar's *Japanese Denim*, Malcolm Todd's *Roommates*, and Cigarettes After Sex's *Apocalypse* sit very close to the Top 5 cluster:
+- **Shared Qualities:** They share organic instrumentation, introspective lyricism, and restrained production.
+- **Why Top 5 Ranks Higher:** While *White Ferrari* and *Apocalypse* lean heavily into slow, ambient melancholy (tempo down to 60 BPM), the Top 5 tracks maintain slightly more rhythmic bounce and soulful groove (e.g., Steve Lacy's funk basslines and Dominic Fike's alternative rhythm), making them easier to replay daily.
+
+### 3. Contrasting with Dissimilar Songs
+Songs like Olivia Rodrigo's *good 4 u*, The Weeknd's *Blinding Lights*, Ne-Yo's *Closer*, and Don Toliver's *After Party* land in the far upper-right quadrant:
+- **Tempo & Energy Contrast:** These songs feature rapid tempos (**126–171 BPM**) and high energy (**66–77**).
+- **Listening Context:** They are engineered for high-arousal environments like workouts, parties, or driving anthems. While enjoyable in specific moods, their aggressive compression and rapid rhythm make them less suited for focused daily listening than the mellow warmth of the Top 5.
+
+### 4. Popularity, Meaning, and Mood
+- **Popularity:** Mainstream chart-toppers like *Blinding Lights* and *good 4 u* boast popularity scores around 90. In contrast, the Top 5 tracks sit comfortably in the **65–76 popularity range**, showing a preference for artist-first indie releases over viral radio hits.
+- **Meaning & Mood:** The Top 5 songs explore nuanced emotional themes—vulnerability, yearning, and relationship reflections (*Evergreen*, *Give You the World*)—paired with laid-back, bittersweet chords that create comforting, repeatable listening experiences.
+
+### 5. Contextualizing Against the Broader Music Landscape
+The 5,000 background tracks (displayed as a dense gray cloud) illustrate how music fans consume across Spotify:
+- High-octane rock anthems like Led Zeppelin's *Whole Lotta Love* push energy past 90.
+- Bright pop tracks like Doja Cat's *Say So*, Justin Bieber's *One Less Lonely Girl*, and Paramore's *Hard Times* spread between 85–120 BPM with energy levels from 67 to 82.
+- Intimate late-night hip-hop like Drake's *Marvins Room* drops to 26 energy at 112 BPM.
+
+Against this vast 5,000-song landscape, your Top 5 forms a remarkably tight, intentional cluster. It demonstrates that your top listening preference is neither chaotic nor extreme: it consistently gravitates toward warm, mid-tempo, medium-energy tracks with heartfelt storytelling.
+
+
+
