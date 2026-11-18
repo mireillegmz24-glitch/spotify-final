@@ -1,0 +1,19 @@
+project:
+  type: website
+  render:
+    - index.qmd
+    - exploration.qmd
+
+website:
+  title: "Spotify Top 5 Analysis"
+  navbar:
+    left:
+      - href: index.qmd
+        text: "Story"
+      - href: exploration.qmd
+        text: "Exploration"
+
+format:
+  html:
+    theme: cosmo
+    toc: true

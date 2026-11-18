@@ -1,0 +1,121 @@
+---
+title: "Sonic Profile Exploration"
+format: html
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+library(tidyverse)
+
+# Create the dataset of Top 5 and comparison tracks
+songs_data <- tibble(
+  title = c(
+    "SQUEEZE", "Oh Yeah?", "WALLFLOWER", "Give You the World", "Evergreen (Stripped)",
+    "White Ferrari", "Japanese Denim", "Roommates", "Apocalypse",
+    "good 4 u", "Blinding Lights", "Closer", "After Party"
+  ),
+  artist = c(
+    "Dominic Fike", "Steve Lacy", "Dominic Fike", "Steve Lacy", "Omar Apollo",
+    "Frank Ocean", "Daniel Caesar", "Malcolm Todd", "Cigarettes After Sex",
+    "Olivia Rodrigo", "The Weeknd", "Ne-Yo", "Don Toliver"
+  ),
+  group = factor(
+    c(
+      rep("Top 5", 5),
+      rep("Similar (Soul / Bedroom Pop)", 4),
+      rep("Dissimilar (Uptempo / Dance / Trap)", 4)
+    ),
+    levels = c("Top 5", "Similar (Soul / Bedroom Pop)", "Dissimilar (Uptempo / Dance / Trap)")
+  ),
+  tempo = c(86, 92, 82, 78, 75, 60, 110, 88, 97, 167, 171, 126, 163),
+  energy = c(52, 48, 44, 45, 30, 18, 42, 50, 47, 66, 73, 77, 68),
+  valence = c(48, 65, 38, 42, 32, 22, 39, 58, 18, 69, 33, 73, 45),
+  popularity = c(72, 68, 65, 74, 76, 84, 81, 66, 88, 89, 93, 75, 80)
+)
+
+# Load 5,000 background tracks from Spotify catalog
+spotify_background <- read_csv("spotify_background.csv", show_col_types = FALSE)
+
+# Select a few recognizable reference tracks to label in the background
+sample_labels <- spotify_background |>
+  filter(title %in% c("Marvins Room", "Say So", "Hard Times", "Whole Lotta Love - 1990 Remaster", "One Less Lonely Girl")) |>
+  mutate(clean_title = case_when(
+    str_detect(title, "Whole Lotta Love") ~ "Whole Lotta Love (Led Zeppelin)",
+    title == "Marvins Room" ~ "Marvins Room (Drake)",
+    title == "Say So" ~ "Say So (Doja Cat)",
+    title == "Hard Times" ~ "Hard Times (Paramore)",
+    title == "One Less Lonely Girl" ~ "One Less Lonely Girl (Justin Bieber)",
+    TRUE ~ title
+  ))
+```
+
+## Sonic Profile Scatter Plot
+
+Explore how my Top 5 songs compare to similar soul/bedroom pop tracks, dissimilar uptempo hits, and a broader sample of 5,000 Spotify tracks.
+
+```{r}
+#| label: spotify-scatter
+#| fig-width: 9.5
+#| fig-height: 6
+
+ggplot() +
+  # 1. Background cloud of 5,000 general Spotify songs
+  geom_point(
+    data = spotify_background,
+    aes(x = tempo, y = energy),
+    color = "grey85",
+    alpha = 0.22,
+    size = 0.8
+  ) +
+  # Subtle labels for a few recognizable background songs
+  geom_text(
+    data = sample_labels,
+    aes(x = tempo, y = energy, label = clean_title),
+    color = "grey35",
+    size = 2.8,
+    vjust = 1.4,
+    check_overlap = TRUE
+  ) +
+  # 2. Foreground: Top 5 and comparison songs
+  geom_point(
+    data = songs_data,
+    aes(x = tempo, y = energy, color = group, size = popularity),
+    alpha = 0.9
+  ) +
+  geom_text(
+    data = songs_data,
+    aes(x = tempo, y = energy, label = title),
+    vjust = -1,
+    size = 3.2,
+    fontface = "bold",
+    check_overlap = TRUE
+  ) +
+  scale_size_continuous(range = c(3, 8), name = "Popularity") +
+  scale_color_manual(
+    values = c(
+      "Top 5" = "#1DB954",
+      "Similar (Soul / Bedroom Pop)" = "#2E86AB",
+      "Dissimilar (Uptempo / Dance / Trap)" = "#D64045"
+    ),
+    name = "Category"
+  ) +
+  scale_x_continuous(limits = c(45, 190), breaks = seq(60, 180, by = 20)) +
+  scale_y_continuous(limits = c(10, 95), breaks = seq(10, 90, by = 15)) +
+  labs(
+    title = "Why My Top 5 Songs Are My Top 5",
+    subtitle = "Positioned against 5,000 Spotify catalog tracks (gray cloud) with recognizable landmarks labeled",
+    x = "Tempo (Beats Per Minute)",
+    y = "Energy Level (0–100)",
+    caption = "Background: 5,000 tracks sampled from Spotify TidyTuesday catalog | Foreground: Personal profile"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(face = "bold", size = 15),
+    panel.grid.minor = element_blank()
+  )
+```
