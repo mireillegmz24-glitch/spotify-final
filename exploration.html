@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Spotify Top 5 Analysis</title>
+<title>Sonic Profile Exploration – Spotify Top 5 Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,30 +29,105 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="project_files/libs/clipboard/clipboard.min.js"></script>
-<script src="project_files/libs/quarto-html/quarto.js" type="module"></script>
-<script src="project_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="project_files/libs/quarto-html/popper.min.js"></script>
-<script src="project_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="project_files/libs/quarto-html/anchor.min.js"></script>
-<link href="project_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="project_files/libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="project_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="project_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="project_files/libs/bootstrap/bootstrap-5dce3422ae1aaea6fd35e22067a0726d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-977607561cd60f84a551947bb62c3781.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
 
 
 </head>
 
-<body class="fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Spotify Top 5 Analysis</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Story</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./exploration.html" aria-current="page"> 
+<span class="menu-text">Exploration</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sonic-profile-scatter-plot" id="toc-sonic-profile-scatter-plot" class="nav-link active" data-scroll-target="#sonic-profile-scatter-plot">Sonic Profile Scatter Plot</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Spotify Top 5 Analysis</h1>
+<h1 class="title">Sonic Profile Exploration</h1>
 </div>
 
 
@@ -71,46 +146,21 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="sonic-profile-scatter-plot" class="level2">
 <h2 class="anchored" data-anchor-id="sonic-profile-scatter-plot">Sonic Profile Scatter Plot</h2>
+<p>Explore how my Top 5 songs compare to similar soul/bedroom pop tracks, dissimilar uptempo hits, and a broader sample of 5,000 Spotify tracks.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="project_files/figure-html/spotify-scatter-1.png" class="img-fluid figure-img" width="912"></p>
+<p><img src="exploration_files/figure-html/spotify-scatter-1.png" class="img-fluid figure-img" width="912"></p>
 </figure>
 </div>
 </div>
 </div>
-</section>
-<section id="research-audio-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="research-audio-analysis">Research &amp; Audio Analysis</h2>
-<section id="the-sweet-spot-why-these-top-5-dominate" class="level3">
-<h3 class="anchored" data-anchor-id="the-sweet-spot-why-these-top-5-dominate">1. The Sweet Spot: Why These Top 5 Dominate</h3>
-<p>Looking at the scatter plot, the Top 5 tracks (<em>SQUEEZE</em>, <em>Oh Yeah?</em>, <em>WALLFLOWER</em>, <em>Give You the World</em>, and <em>Evergreen</em>) cluster closely together in a distinct “pocket”: - <strong>Tempo:</strong> A relaxed, head-nodding tempo between <strong>75 and 92 BPM</strong>. - <strong>Energy:</strong> Moderate to low energy levels between <strong>30 and 52</strong>, avoiding overwhelming loudness. - <strong>Atmosphere:</strong> Warm, guitar-driven indie R&amp;B and bedroom pop where vocal tone and emotional intimacy are foregrounded.</p>
-</section>
-<section id="comparisons-to-similar-songs" class="level3">
-<h3 class="anchored" data-anchor-id="comparisons-to-similar-songs">2. Comparisons to Similar Songs</h3>
-<p>Tracks like Frank Ocean’s <em>White Ferrari</em>, Daniel Caesar’s <em>Japanese Denim</em>, Malcolm Todd’s <em>Roommates</em>, and Cigarettes After Sex’s <em>Apocalypse</em> sit very close to the Top 5 cluster: - <strong>Shared Qualities:</strong> They share organic instrumentation, introspective lyricism, and restrained production. - <strong>Why Top 5 Ranks Higher:</strong> While <em>White Ferrari</em> and <em>Apocalypse</em> lean heavily into slow, ambient melancholy (tempo down to 60 BPM), the Top 5 tracks maintain slightly more rhythmic bounce and soulful groove (e.g., Steve Lacy’s funk basslines and Dominic Fike’s alternative rhythm), making them easier to replay daily.</p>
-</section>
-<section id="contrasting-with-dissimilar-songs" class="level3">
-<h3 class="anchored" data-anchor-id="contrasting-with-dissimilar-songs">3. Contrasting with Dissimilar Songs</h3>
-<p>Songs like Olivia Rodrigo’s <em>good 4 u</em>, The Weeknd’s <em>Blinding Lights</em>, Ne-Yo’s <em>Closer</em>, and Don Toliver’s <em>After Party</em> land in the far upper-right quadrant: - <strong>Tempo &amp; Energy Contrast:</strong> These songs feature rapid tempos (<strong>126–171 BPM</strong>) and high energy (<strong>66–77</strong>). - <strong>Listening Context:</strong> They are engineered for high-arousal environments like workouts, parties, or driving anthems. While enjoyable in specific moods, their aggressive compression and rapid rhythm make them less suited for focused daily listening than the mellow warmth of the Top 5.</p>
-</section>
-<section id="popularity-meaning-and-mood" class="level3">
-<h3 class="anchored" data-anchor-id="popularity-meaning-and-mood">4. Popularity, Meaning, and Mood</h3>
-<ul>
-<li><strong>Popularity:</strong> Mainstream chart-toppers like <em>Blinding Lights</em> and <em>good 4 u</em> boast popularity scores around 90. In contrast, the Top 5 tracks sit comfortably in the <strong>65–76 popularity range</strong>, showing a preference for artist-first indie releases over viral radio hits.</li>
-<li><strong>Meaning &amp; Mood:</strong> The Top 5 songs explore nuanced emotional themes—vulnerability, yearning, and relationship reflections (<em>Evergreen</em>, <em>Give You the World</em>)—paired with laid-back, bittersweet chords that create comforting, repeatable listening experiences.</li>
-</ul>
-</section>
-<section id="contextualizing-against-the-broader-music-landscape" class="level3">
-<h3 class="anchored" data-anchor-id="contextualizing-against-the-broader-music-landscape">5. Contextualizing Against the Broader Music Landscape</h3>
-<p>The 5,000 background tracks (displayed as a dense gray cloud) illustrate how music fans consume across Spotify: - High-octane rock anthems like Led Zeppelin’s <em>Whole Lotta Love</em> push energy past 90. - Bright pop tracks like Doja Cat’s <em>Say So</em>, Justin Bieber’s <em>One Less Lonely Girl</em>, and Paramore’s <em>Hard Times</em> spread between 85–120 BPM with energy levels from 67 to 82. - Intimate late-night hip-hop like Drake’s <em>Marvins Room</em> drops to 26 energy at 112 BPM.</p>
-<p>Against this vast 5,000-song landscape, your Top 5 forms a remarkably tight, intentional cluster. It demonstrates that your top listening preference is neither chaotic nor extreme: it consistently gravitates toward warm, mid-tempo, medium-energy tracks with heartfelt storytelling.</p>
-</section>
+
+
 </section>
 
-</main>
-<!-- /main column -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -184,7 +234,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/mireillegmz24-glitch\.github\.io\/spotify-final\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
