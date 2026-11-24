@@ -3,6 +3,8 @@ project:
   render:
     - index.qmd
     - exploration.qmd
+    - comparison.qmd
+    - conclusion.qmd
     - about.qmd
 
 website:
@@ -13,6 +15,10 @@ website:
         text: "Story"
       - href: exploration.qmd
         text: "Exploration"
+      - href: comparison.qmd
+        text: "Comparison"
+      - href: conclusion.qmd
+        text: "Conclusion"
     right:
       - href: about.qmd
         text: "About Me"

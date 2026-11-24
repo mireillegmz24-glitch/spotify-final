@@ -1,0 +1,29 @@
+---
+title: "Conclusion"
+---
+
+## Research Findings
+
+This study analyzed personal listening habits by examining the sonic attributes of my Top 5 Spotify tracks alongside comparison songs and a 5,000-track sample of the Spotify catalog. 
+
+The central finding is that daily listening habits are highly deliberate: rather than choosing music randomly across Spotify's broad acoustic spectrum, my most-played tracks consistently converge on a specific sweet spot defined by rhythmic stability, low listening fatigue, and emotional resonance.
+
+---
+
+## Evidence from the Graph
+
+The scatter plot in the [Exploration](exploration.qmd) tab reveals three clear graphical patterns:
+
+1. **Tight Cluster Pocket:** The Top 5 songs (*SQUEEZE*, *Oh Yeah?*, *WALLFLOWER*, *Give You the World*, and *Evergreen*) occupy a compact region defined by **75–92 BPM** and **30–52 energy**.
+2. **Contrast with Catalog Dispersion:** The 5,000 background tracks spread widely across the entire plot—from high-octane rock anthems like Led Zeppelin's *Whole Lotta Love* (energy > 90) to upbeat pop tracks like Paramore's *Hard Times* (120 BPM, 82 energy). In contrast, the Top 5 avoids extremes.
+3. **Distance from High-Arousal Outliers:** Chart-topping tracks like *Blinding Lights* (171 BPM, 73 energy) and *good 4 u* (167 BPM, 66 energy) sit in the far upper-right quadrant, visibly isolated from the Top 5 cluster.
+
+---
+
+## Evidence from Spotify Platform Metrics
+
+Spotify's audio feature algorithms and catalog data provide quantitative backing for these listening patterns:
+
+* **Popularity Index (65–76 vs. 90+):** Mainstream viral hits like *Blinding Lights* (93) and *good 4 u* (89) dominate global charts, but the Top 5 songs sit comfortably in the **65–76 popularity tier**. This indicates a preference for dedicated artist catalog cuts over radio-promoted hits.
+* **Valence & Mood Complexity:** Spotify's valence scores for the Top 5 range between 32 and 65, reflecting bittersweet, emotionally nuanced tones rather than hyper-positive party pop.
+* **Replay Optimization:** Low-to-moderate energy levels (30–52) produce minimal sonic compression and ear fatigue. Combined with steady, mid-tempo grooves, these characteristics make the Top 5 ideal for continuous, daily background listening, study, and reflection.

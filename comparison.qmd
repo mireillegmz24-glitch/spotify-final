@@ -1,0 +1,41 @@
+---
+title: "Song Comparisons"
+---
+
+## Overview
+
+To understand what makes my Top 5 songs unique, this comparison examines the sonic similarities and differences across the tracks analyzed in the scatter plot: my **Top 5**, closely related **Similar** tracks, and contrasting **Dissimilar** hits.
+
+---
+
+## 1. Within the Top 5
+
+All five core songs share a focused musical identity, but each brings distinct nuances:
+
+* **SQUEEZE (Dominic Fike):** Tempo 86 BPM, Energy 52. The most energetic of the Top 5, pairing punchy alternative drum patterns with relaxed vocals.
+* **Oh Yeah? (Steve Lacy):** Tempo 92 BPM, Energy 48, Valence 65. The brightest and most upbeat song in the group, driven by warm funk basslines and high musical optimism.
+* **WALLFLOWER (Dominic Fike):** Tempo 82 BPM, Energy 44, Valence 38. A more melancholic, guitar-driven bedroom pop record with contemplative pacing.
+* **Give You the World (Steve Lacy):** Tempo 78 BPM, Energy 45. A slow-burn, soulful ballad with vintage R&B chord progressions and intimate falsetto.
+* **Evergreen [Stripped] (Omar Apollo):** Tempo 75 BPM, Energy 30. The softest and most acoustic track in the group, relying on minimal guitar backing and raw vocal vulnerability.
+
+**Shared Core:** Moderate tempos (75–92 BPM), low-to-medium energy (30–52), and organic guitar or bass instrumentation that prioritizes vocal intimacy over heavy electronic production.
+
+---
+
+## 2. Top 5 vs. Similar Tracks (R&B & Bedroom Pop)
+
+* **Similar Songs:** *White Ferrari* (Frank Ocean), *Japanese Denim* (Daniel Caesar), *Roommates* (Malcolm Todd), and *Apocalypse* (Cigarettes After Sex).
+* **Similarities:** Like the Top 5, these tracks feature introspective lyrics, warm organic instrumentation, and avoid harsh compression or abrasive synthesizers.
+* **Differences:**
+  * *Pacing & Rhythm:* Tracks like *White Ferrari* (60 BPM, Energy 18) and *Apocalypse* (Valence 18) lean deeper into slow, ambient melancholy. The Top 5 tracks maintain slightly more rhythmic bounce and groove, making them easier to repeat throughout the day.
+  * *Tempo Variation:* *Japanese Denim* pushes to 110 BPM while maintaining low energy (42), whereas the Top 5 stays tightly clustered under 95 BPM.
+
+---
+
+## 3. Top 5 vs. Dissimilar Tracks (Uptempo Pop, Dance & Trap)
+
+* **Dissimilar Songs:** *good 4 u* (Olivia Rodrigo), *Blinding Lights* (The Weeknd), *Closer* (Ne-Yo), and *After Party* (Don Toliver).
+* **Differences:**
+  * **Tempo:** High-speed tempos ranging from **126 to 171 BPM**, compared to the Top 5's relaxed **75–92 BPM**.
+  * **Energy:** Intense energy levels between **66 and 77**, driven by heavily compressed kicks, high-gain synthesizers, and loud mastering.
+  * **Listening Function:** These tracks are engineered for high-arousal settings like workouts, driving, or parties. While effective in short bursts, their high sensory demand contrasts sharply with the comforting, low-fatigue profile of the Top 5.
