@@ -1,17 +1,24 @@
 [
   {
-    "objectID": "exploration.html",
-    "href": "exploration.html",
-    "title": "Sonic Profile Exploration",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
     "section": "",
-    "text": "Explore how my Top 5 songs compare to similar soul/bedroom pop tracks, dissimilar uptempo hits, and a broader sample of 5,000 Spotify tracks."
+    "text": "Name: Mireille Gomez\nEmail: m.gomez30@ncf.edu\nPhone: 954-998-9517\nUniversity: New College of Florida"
   },
   {
-    "objectID": "exploration.html#sonic-profile-scatter-plot",
-    "href": "exploration.html#sonic-profile-scatter-plot",
-    "title": "Sonic Profile Exploration",
+    "objectID": "about.html#contact-information",
+    "href": "about.html#contact-information",
+    "title": "About Me",
     "section": "",
-    "text": "Explore how my Top 5 songs compare to similar soul/bedroom pop tracks, dissimilar uptempo hits, and a broader sample of 5,000 Spotify tracks."
+    "text": "Name: Mireille Gomez\nEmail: m.gomez30@ncf.edu\nPhone: 954-998-9517\nUniversity: New College of Florida"
+  },
+  {
+    "objectID": "about.html#data-source",
+    "href": "about.html#data-source",
+    "title": "About Me",
+    "section": "Data Source",
+    "text": "Data Source\nThe data used in this project combines personal listening metrics with audio feature data sampled from the Spotify catalog (sourced via TidyTuesday’s Spotify songs dataset and Spotify’s Web API). The dataset includes acoustic measurements such as tempo (beats per minute), energy levels, valence (musical positiveness), and track popularity scores, allowing for detailed comparisons between my top 5 most-played songs, similar and contrasting reference tracks, and a wider landscape of 5,000 catalog songs.\n\nGitHub Repository: https://github.com/mireillegmz24-glitch/spotify-final"
   },
   {
     "objectID": "index.html",
@@ -33,5 +40,19 @@
     "title": "The Story Behind My Top 5",
     "section": "Research & Audio Analysis",
     "text": "Research & Audio Analysis\n\n1. The Sweet Spot: Why These Top 5 Dominate\nLooking at the musical attributes, the Top 5 tracks (SQUEEZE, Oh Yeah?, WALLFLOWER, Give You the World, and Evergreen) cluster closely together in a distinct “pocket”: - Tempo: A relaxed, head-nodding tempo between 75 and 92 BPM. - Energy: Moderate to low energy levels between 30 and 52, avoiding overwhelming loudness. - Atmosphere: Warm, guitar-driven indie R&B and bedroom pop where vocal tone and emotional intimacy are foregrounded.\n\n\n2. Comparisons to Similar Songs\nTracks like Frank Ocean’s White Ferrari, Daniel Caesar’s Japanese Denim, Malcolm Todd’s Roommates, and Cigarettes After Sex’s Apocalypse sit very close to the Top 5 cluster: - Shared Qualities: They share organic instrumentation, introspective lyricism, and restrained production. - Why Top 5 Ranks Higher: While White Ferrari and Apocalypse lean heavily into slow, ambient melancholy (tempo down to 60 BPM), the Top 5 tracks maintain slightly more rhythmic bounce and soulful groove (e.g., Steve Lacy’s funk basslines and Dominic Fike’s alternative rhythm), making them easier to replay daily.\n\n\n3. Contrasting with Dissimilar Songs\nSongs like Olivia Rodrigo’s good 4 u, The Weeknd’s Blinding Lights, Ne-Yo’s Closer, and Don Toliver’s After Party land in the far upper-right quadrant: - Tempo & Energy Contrast: These songs feature rapid tempos (126–171 BPM) and high energy (66–77). - Listening Context: They are engineered for high-arousal environments like workouts, parties, or driving anthems. While enjoyable in specific moods, their aggressive compression and rapid rhythm make them less suited for focused daily listening than the mellow warmth of the Top 5.\n\n\n4. Popularity, Meaning, and Mood\n\nPopularity: Mainstream chart-toppers like Blinding Lights and good 4 u boast popularity scores around 90. In contrast, the Top 5 tracks sit comfortably in the 65–76 popularity range, showing a preference for artist-first indie releases over viral radio hits.\nMeaning & Mood: The Top 5 songs explore nuanced emotional themes—vulnerability, yearning, and relationship reflections (Evergreen, Give You the World)—paired with laid-back, bittersweet chords that create comforting, repeatable listening experiences.\n\n\n\n5. Contextualizing Against the Broader Music Landscape\nThe 5,000 background tracks sampled from Spotify illustrate how music fans consume across Spotify: - High-octane rock anthems like Led Zeppelin’s Whole Lotta Love push energy past 90. - Bright pop tracks like Doja Cat’s Say So, Justin Bieber’s One Less Lonely Girl, and Paramore’s Hard Times spread between 85–120 BPM with energy levels from 67 to 82. - Intimate late-night hip-hop like Drake’s Marvins Room drops to 26 energy at 112 BPM.\nAgainst this vast 5,000-song landscape, the Top 5 forms a remarkably tight, intentional cluster. It demonstrates that the core listening preference is neither chaotic nor extreme: it consistently gravitates toward warm, mid-tempo, medium-energy tracks with heartfelt storytelling."
+  },
+  {
+    "objectID": "exploration.html",
+    "href": "exploration.html",
+    "title": "Sonic Profile Exploration",
+    "section": "",
+    "text": "Explore how my Top 5 songs compare to similar soul/bedroom pop tracks, dissimilar uptempo hits, and a broader sample of 5,000 Spotify tracks."
+  },
+  {
+    "objectID": "exploration.html#sonic-profile-scatter-plot",
+    "href": "exploration.html#sonic-profile-scatter-plot",
+    "title": "Sonic Profile Exploration",
+    "section": "",
+    "text": "Explore how my Top 5 songs compare to similar soul/bedroom pop tracks, dissimilar uptempo hits, and a broader sample of 5,000 Spotify tracks."
   }
 ]
