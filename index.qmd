@@ -11,7 +11,7 @@ execute:
 
 Welcome to my Spotify Top 5 audio analysis project. This project examines my top 5 most-played songs on Spotify—focusing on musical attributes like tempo, energy, and genre characteristics—and compares them to both similar tracks and the wider Spotify catalog.
 
-You can interactively explore the data visualization under the [Exploration](exploration.qmd) tab.
+You can interactively explore the data visualization under the [Visualization](exploration.qmd) tab.
 
 ## Research & Audio Analysis
 

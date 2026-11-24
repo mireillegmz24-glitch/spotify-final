@@ -12,9 +12,9 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: "Story"
+        text: "Explanation"
       - href: exploration.qmd
-        text: "Exploration"
+        text: "Visualization"
       - href: comparison.qmd
         text: "Comparison"
       - href: conclusion.qmd
@@ -25,5 +25,7 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme:
+      - darkly
+      - styles.scss
     toc: true

@@ -12,7 +12,7 @@ The central finding is that daily listening habits are highly deliberate: rather
 
 ## Evidence from the Graph
 
-The scatter plot in the [Exploration](exploration.qmd) tab reveals three clear graphical patterns:
+The scatter plot in the [Visualization](exploration.qmd) tab reveals three clear graphical patterns:
 
 1. **Tight Cluster Pocket:** The Top 5 songs (*SQUEEZE*, *Oh Yeah?*, *WALLFLOWER*, *Give You the World*, and *Evergreen*) occupy a compact region defined by **75–92 BPM** and **30–52 energy**.
 2. **Contrast with Catalog Dispersion:** The 5,000 background tracks spread widely across the entire plot—from high-octane rock anthems like Led Zeppelin's *Whole Lotta Love* (energy > 90) to upbeat pop tracks like Paramore's *Hard Times* (120 BPM, 82 energy). In contrast, the Top 5 avoids extremes.
