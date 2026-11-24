@@ -60,14 +60,14 @@
     "href": "index.html",
     "title": "The Story Behind My Top 5",
     "section": "",
-    "text": "Welcome to my Spotify Top 5 audio analysis project. This project examines my top 5 most-played songs on Spotify—focusing on musical attributes like tempo, energy, and genre characteristics—and compares them to both similar tracks and the wider Spotify catalog.\nYou can interactively explore the data visualization under the Exploration tab."
+    "text": "Welcome to my Spotify Top 5 audio analysis project. This project examines my top 5 most-played songs on Spotify—focusing on musical attributes like tempo, energy, and genre characteristics—and compares them to both similar tracks and the wider Spotify catalog.\nYou can interactively explore the data visualization under the Visualization tab."
   },
   {
     "objectID": "index.html#overview",
     "href": "index.html#overview",
     "title": "The Story Behind My Top 5",
     "section": "",
-    "text": "Welcome to my Spotify Top 5 audio analysis project. This project examines my top 5 most-played songs on Spotify—focusing on musical attributes like tempo, energy, and genre characteristics—and compares them to both similar tracks and the wider Spotify catalog.\nYou can interactively explore the data visualization under the Exploration tab."
+    "text": "Welcome to my Spotify Top 5 audio analysis project. This project examines my top 5 most-played songs on Spotify—focusing on musical attributes like tempo, energy, and genre characteristics—and compares them to both similar tracks and the wider Spotify catalog.\nYou can interactively explore the data visualization under the Visualization tab."
   },
   {
     "objectID": "index.html#research-audio-analysis",
@@ -109,7 +109,7 @@
     "href": "conclusion.html#evidence-from-the-graph",
     "title": "Conclusion",
     "section": "Evidence from the Graph",
-    "text": "Evidence from the Graph\nThe scatter plot in the Exploration tab reveals three clear graphical patterns:\n\nTight Cluster Pocket: The Top 5 songs (SQUEEZE, Oh Yeah?, WALLFLOWER, Give You the World, and Evergreen) occupy a compact region defined by 75–92 BPM and 30–52 energy.\nContrast with Catalog Dispersion: The 5,000 background tracks spread widely across the entire plot—from high-octane rock anthems like Led Zeppelin’s Whole Lotta Love (energy &gt; 90) to upbeat pop tracks like Paramore’s Hard Times (120 BPM, 82 energy). In contrast, the Top 5 avoids extremes.\nDistance from High-Arousal Outliers: Chart-topping tracks like Blinding Lights (171 BPM, 73 energy) and good 4 u (167 BPM, 66 energy) sit in the far upper-right quadrant, visibly isolated from the Top 5 cluster."
+    "text": "Evidence from the Graph\nThe scatter plot in the Visualization tab reveals three clear graphical patterns:\n\nTight Cluster Pocket: The Top 5 songs (SQUEEZE, Oh Yeah?, WALLFLOWER, Give You the World, and Evergreen) occupy a compact region defined by 75–92 BPM and 30–52 energy.\nContrast with Catalog Dispersion: The 5,000 background tracks spread widely across the entire plot—from high-octane rock anthems like Led Zeppelin’s Whole Lotta Love (energy &gt; 90) to upbeat pop tracks like Paramore’s Hard Times (120 BPM, 82 energy). In contrast, the Top 5 avoids extremes.\nDistance from High-Arousal Outliers: Chart-topping tracks like Blinding Lights (171 BPM, 73 energy) and good 4 u (167 BPM, 66 energy) sit in the far upper-right quadrant, visibly isolated from the Top 5 cluster."
   },
   {
     "objectID": "conclusion.html#evidence-from-spotify-platform-metrics",
