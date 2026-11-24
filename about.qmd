@@ -1,0 +1,18 @@
+---
+title: "About Me"
+---
+
+## Contact Information
+
+- **Name:** Mireille Gomez
+- **Email:** [m.gomez30@ncf.edu](mailto:m.gomez30@ncf.edu)
+- **Phone:** 954-998-9517
+- **University:** [New College of Florida](https://www.ncf.edu/)
+
+## Data Source
+
+The data used in this project combines personal listening metrics with audio feature data sampled from the Spotify catalog (sourced via TidyTuesday's Spotify songs dataset and Spotify's Web API). The dataset includes acoustic measurements such as tempo (beats per minute), energy levels, valence (musical positiveness), and track popularity scores, allowing for detailed comparisons between my top 5 most-played songs, similar and contrasting reference tracks, and a wider landscape of 5,000 catalog songs.
+
+---
+
+**GitHub Repository:** [https://github.com/mireillegmz24-glitch/spotify-final](https://github.com/mireillegmz24-glitch/spotify-final)
